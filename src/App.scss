@@ -1,15 +1,24 @@
 $navBarColor: #282c34;
 $backgroundColor: #ddd;
 $textColor: #222;
-$textColorInverted: ddd;
+$textColorInverted: #ddd;
+$contentVerticleSpacing: calc(calc(100vw - 960px) / 2);
 
-.App {
-	text-align: center;
+h1 {
+	font-size: 64px;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: $navBarColor;
 }
 
 .Header {
+	position: fixed;
 	width: 100%;
 	height: 94px;
+	top: 0;
 	background-color: $navBarColor;
 	display: flex;
 	flex-direction: column;
@@ -19,4 +28,117 @@ $textColorInverted: ddd;
 	.logo {
 		object-fit: contain;
 	}
+}
+
+.Page {
+	margin-top: 94px;
+}
+
+.Margin {
+	padding-left: $contentVerticleSpacing;
+	padding-right: $contentVerticleSpacing;
+}
+
+.Banner {
+	height: 680px;
+	width: 100%;
+	background-image: url('./images/banner.webp');
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	position: relative;
+
+	.PurpleTextThingy {
+		background-color: purple;
+		color: $textColorInverted;
+		position: absolute;
+		bottom: 150px;
+	}
+}
+
+.Body {
+	box-sizing: border-box;
+	background-color: $backgroundColor;
+}
+
+.Products {
+	margin-top: -100px;
+	position: relative;
+
+	.Items {
+		position: absolute;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		height: 350px;
+		width: 100%;
+
+		.Item {
+			height: 350px;
+			flex: 1;
+			background-color: white;
+			box-sizing: border-box;
+			border-right: 1px solid #cccc;
+		}
+		& :last-child {
+			border-right: 0px solid #cccc;
+		}
+		& :hover {
+			background-color: $backgroundColor;
+		}
+	}
+}
+
+.HowItWorksSpacer {
+	height: 420px;
+}
+
+.HowItWorks {
+	background-color: white;
+	height: 300px;
+	text-align: center;
+}
+
+.OrderTodaySpacing {
+	height: 80px;
+}
+
+.OrderToday {
+	background-image: url('./images/banner.webp');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.PurpleTextThingy {
+		background-color: purple;
+		color: $textColorInverted;
+		text-align: center;
+		// width: 50%;
+	}
+}
+
+.ReviewSpacing {
+	height: 80px;
+}
+
+.Review {
+	background-color: white;
+	height: 150px;
+	text-align: center;
+}
+
+.Photos {
+}
+
+.CallToAction {
+}
+
+.Footer {
+	background-color: $navBarColor;
+	color: $textColorInverted;
+	text-align: center;
+	padding: 14px;
 }
