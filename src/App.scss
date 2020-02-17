@@ -1,0 +1,22 @@
+$navBarColor: #282c34;
+$backgroundColor: #ddd;
+$textColor: #222;
+$textColorInverted: ddd;
+
+.App {
+	text-align: center;
+}
+
+.Header {
+	width: 100%;
+	height: 94px;
+	background-color: $navBarColor;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding: 6px;
+
+	.logo {
+		object-fit: contain;
+	}
+}
