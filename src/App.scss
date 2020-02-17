@@ -4,10 +4,26 @@ $textColor: #222;
 $textColorInverted: #ddd;
 $contentVerticleSpacing: calc(calc(100vw - 960px) / 2);
 
-h1 {
-	font-size: 64px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
 	margin: 0px;
 	padding: 0px;
+}
+
+h1 {
+	font-size: 64px;
+}
+
+h2 {
+}
+
+h3 {
+	font-size: 34px;
 }
 
 body {
@@ -45,6 +61,7 @@ body {
 	background-image: url('./images/banner.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 	box-sizing: border-box;
 	position: relative;
 
@@ -75,10 +92,22 @@ body {
 
 		.Item {
 			height: 350px;
+			width: 33%;
 			flex: 1;
 			background-color: white;
 			box-sizing: border-box;
 			border-right: 1px solid #cccc;
+			display: flex;
+			flex-direction: column;
+			padding: 30px;
+
+			.Image {
+				margin-top: 20px;
+				flex: 1;
+				object-fit: contain;
+				contain: strict;
+				// max-height: -webkit-fill-available;
+			}
 		}
 		& :last-child {
 			border-right: 0px solid #cccc;
@@ -90,7 +119,7 @@ body {
 }
 
 .HowItWorksSpacer {
-	height: 420px;
+	height: 400px;
 }
 
 .HowItWorks {
@@ -99,8 +128,8 @@ body {
 	text-align: center;
 }
 
-.OrderTodaySpacing {
-	height: 80px;
+.ContentSpacers {
+	margin-top: 40px;
 }
 
 .OrderToday {
@@ -120,10 +149,6 @@ body {
 	}
 }
 
-.ReviewSpacing {
-	height: 80px;
-}
-
 .Review {
 	background-color: white;
 	height: 150px;
@@ -131,14 +156,32 @@ body {
 }
 
 .Photos {
+	background-color: white;
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	.GridItem {
+		background-color: lightblue;
+		flex: 1;
+		margin-right: 20px;
+	}
+	& :last-child {
+		margin-right: 0px;
+	}
 }
 
 .CallToAction {
+	background-color: white;
+	height: 100px;
+	text-align: center;
 }
 
 .Footer {
 	background-color: $navBarColor;
 	color: $textColorInverted;
-	text-align: center;
-	padding: 14px;
+	// text-align: center;
+	padding-top: 14px;
+	padding-bottom: 14px;
 }
