@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import logo from './images/logo.webp';
+import logo from './images/logo.png';
 import cereal from './images/cereal.png';
 
 function App() {
@@ -21,7 +21,24 @@ function App() {
 
 					<div className='HowItWorksSpacer' />
 					<div className='HowItWorks'>
-						HOW DOES IT WORK?<br />we're not exactly sure
+						<h3>HOW DOES IT WORK?</h3>
+						<div className='Steps'>
+							<p>
+								<b>1.</b> Pick out your Snaxx
+							</p>
+							<p>
+								<b>2.</b> Order your Snaxx
+							</p>
+							<p>
+								<b>3.</b> Eat your Snaxx
+							</p>
+						</div>
+						<p>
+							<b>Question</b>: Is it really that simple?!
+						</p>
+						<p>
+							<b>Answer</b>: Yes! Eating food is usually pretty easy.
+						</p>
 					</div>
 
 					<div className='OrderToday ContentSpacers'>
@@ -30,7 +47,9 @@ function App() {
 
 					<div className='Review ContentSpacers'>
 						<h1>WHAT SNAXXERS ARE SAYING</h1>
-						<p>we make the big yummy</p>
+						<p>"we make the big yummy"</p>
+						<p>"they put the 'nut' in my nutrition"</p>
+						<p>"golly gosh this is good"</p>
 					</div>
 
 					<div className='Photos ContentSpacers'>
@@ -41,8 +60,9 @@ function App() {
 					</div>
 
 					<div className='CallToAction ContentSpacers'>
-						<p>we put the 'nut' in nutritional</p>
-						<p>call to action</p>
+						<h1 className='PurpleTextThingy'>PLS BUY</h1>
+						{/* <p>we put the 'nut' in nutritional</p>
+						<p>call to action</p> */}
 					</div>
 
 					<div style={{ height: '40px' }} />

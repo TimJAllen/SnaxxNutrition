@@ -16,18 +16,23 @@ p {
 }
 
 h1 {
-	font-size: 64px;
+	font-size: 3em;
 }
 
 h2 {
 }
 
 h3 {
-	font-size: 34px;
+	font-size: 2em;
 }
 
 body {
 	background-color: $navBarColor;
+}
+
+.PurpleTextThingy {
+	background-color: purple;
+	color: $textColorInverted;
 }
 
 .Header {
@@ -36,12 +41,19 @@ body {
 	height: 94px;
 	top: 0;
 	background-color: $navBarColor;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 6px;
 
 	.logo {
+		-o-object-fit: contain;
 		object-fit: contain;
 	}
 }
@@ -58,22 +70,22 @@ body {
 .Banner {
 	height: 680px;
 	width: 100%;
-	background-image: url('./images/banner.webp');
+	background-image: url('./images/banner.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	position: relative;
 
 	.PurpleTextThingy {
-		background-color: purple;
-		color: $textColorInverted;
 		position: absolute;
 		bottom: 150px;
 	}
 }
 
 .Body {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	background-color: $backgroundColor;
 }
@@ -84,8 +96,15 @@ body {
 
 	.Items {
 		position: absolute;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
 		flex-direction: row;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
 		justify-content: space-between;
 		height: 350px;
 		width: 100%;
@@ -93,20 +112,30 @@ body {
 		.Item {
 			height: 350px;
 			width: 33%;
+			-webkit-box-flex: 1;
+			-ms-flex: 1;
 			flex: 1;
 			background-color: white;
+			-webkit-box-sizing: border-box;
 			box-sizing: border-box;
 			border-right: 1px solid #cccc;
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
 			flex-direction: column;
 			padding: 30px;
 
 			.Image {
 				margin-top: 20px;
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
 				flex: 1;
+				-o-object-fit: contain;
 				object-fit: contain;
 				contain: strict;
-				// max-height: -webkit-fill-available;
 			}
 		}
 		& :last-child {
@@ -124,8 +153,29 @@ body {
 
 .HowItWorks {
 	background-color: white;
-	height: 300px;
 	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	padding: 20px;
+
+	.Steps {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-ms-flex-pack: distribute;
+		justify-content: space-around;
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
 }
 
 .ContentSpacers {
@@ -133,55 +183,79 @@ body {
 }
 
 .OrderToday {
-	background-image: url('./images/banner.webp');
+	background-image: url('./images/banner.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 200px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
-
-	.PurpleTextThingy {
-		background-color: purple;
-		color: $textColorInverted;
-		text-align: center;
-		// width: 50%;
-	}
 }
 
 .Review {
 	background-color: white;
-	height: 150px;
 	text-align: center;
+	padding: 20px;
 }
 
 .Photos {
 	background-color: white;
 	height: 100px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
 	flex-direction: row;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 
 	.GridItem {
 		background-color: lightblue;
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
 		flex: 1;
-		margin-right: 20px;
+		margin-left: 10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
 	}
 	& :last-child {
-		margin-right: 0px;
+		margin-right: 10px;
 	}
 }
 
 .CallToAction {
-	background-color: white;
-	height: 100px;
-	text-align: center;
+	background-image: url('./images/banner.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 200px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	position: relative;
+
+	.PurpleTextThingy {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+	}
 }
 
 .Footer {
 	background-color: $navBarColor;
 	color: $textColorInverted;
-	// text-align: center;
 	padding-top: 14px;
 	padding-bottom: 14px;
 }
