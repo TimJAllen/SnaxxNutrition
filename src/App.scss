@@ -51,6 +51,7 @@ body {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 6px;
+	z-index: 100;
 
 	.logo {
 		-o-object-fit: contain;
@@ -68,9 +69,10 @@ body {
 }
 
 .Banner {
-	height: 680px;
+	z-index: -1;
+	height: 780px;
 	width: 100%;
-	background-image: url('./images/banner.png');
+	background-image: url('./images/banner.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -90,54 +92,44 @@ body {
 	background-color: $backgroundColor;
 }
 
-.Products {
+.Stuff {
 	margin-top: -100px;
-	position: relative;
+}
+
+.Products {
+	// margin-top: -100px;
+	// position: relative;
 
 	.Items {
-		position: absolute;
+		// position: absolute;
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
+
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
-		-ms-flex-direction: row;
-		flex-direction: row;
 		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
-		justify-content: space-between;
-		height: 350px;
-		width: 100%;
 
-		.Item {
-			height: 350px;
-			width: 33%;
-			-webkit-box-flex: 1;
-			-ms-flex: 1;
-			flex: 1;
+		-ms-flex-direction: row;
+		-ms-flex-pack: justify;
+
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		z-index: 600;
+
+		.Product {
 			background-color: white;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
 			border-right: 1px solid #cccc;
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-orient: vertical;
-			-webkit-box-direction: normal;
-			-ms-flex-direction: column;
-			flex-direction: column;
-			padding: 30px;
+			padding: 8px;
 
 			.Image {
-				margin-top: 20px;
-				-webkit-box-flex: 1;
-				-ms-flex: 1;
-				flex: 1;
-				-o-object-fit: contain;
+				margin-top: 16px;
 				object-fit: contain;
-				contain: strict;
+				width: 100%;
 			}
 		}
+
 		& :last-child {
 			border-right: 0px solid #cccc;
 		}
@@ -148,7 +140,7 @@ body {
 }
 
 .HowItWorksSpacer {
-	height: 400px;
+	height: 20px;
 }
 
 .HowItWorks {
@@ -183,7 +175,7 @@ body {
 }
 
 .OrderToday {
-	background-image: url('./images/banner.png');
+	background-image: url('./images/banner.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 200px;
@@ -206,34 +198,35 @@ body {
 
 .Photos {
 	background-color: white;
-	height: 100px;
+	// height: 100px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	-ms-flex-direction: row;
-	flex-direction: row;
+	-ms-flex-direction: column;
+	flex-direction: column;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 
 	.GridItem {
 		background-color: lightblue;
-		-webkit-box-flex: 1;
-		-ms-flex: 1;
-		flex: 1;
-		margin-left: 10px;
-		margin-top: 10px;
-		margin-bottom: 10px;
-	}
-	& :last-child {
-		margin-right: 10px;
+		// -webkit-box-flex: 1;
+		// -ms-flex: 1;
+		// flex: 1;
+		margin: 10px;
+		// height: 200px;
+
+		.Image {
+			object-fit: contain;
+			width: 100%;
+		}
 	}
 }
 
 .CallToAction {
-	background-image: url('./images/banner.png');
+	background-image: url('./images/banner.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 200px;
